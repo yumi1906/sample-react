@@ -4,7 +4,7 @@ export const Counter:React.FC = () => {
     const [count, setCount] = React.useState(0);
 
     const inc = () => {
-        setTimeout(() => {setCount(count + 1)}, 2000);
+        setTimeout(() => {setCount(v => v + 1)}, 2000);
     };
 
     const dec = (count: number) => {
@@ -15,7 +15,7 @@ export const Counter:React.FC = () => {
             // マイナスは表示させたくない
             setCount(0);
         } else {
-            setCount(tmpCount);
+            setCount(v => v - 1);
         }
     };
 
