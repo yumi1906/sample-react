@@ -1,10 +1,12 @@
 import "./styles.css";
 
 export default function App() {
-    const undefined = 'undefined';
+    const sample_string = 'hello';
+    const sample_nuber = 123;
   return (
       <ul>
-          <li><span>undefined</span>:<span>{undefined}</span></li>
+          <li><span>sample_string</span>:<span>{sample_string}</span></li>
+          <li><span>sample_nuber</span>:<span>{sample_nuber}</span></li>
       </ul>
   );
 }
