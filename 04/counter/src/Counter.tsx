@@ -4,8 +4,7 @@ export const Counter:React.FC = () => {
     const [count, setCount] = React.useState(0);
 
     const inc = () => {
-        // ToDo setTimeout()を加えてみる
-        setCount(count + 1);
+        setTimeout(() => {setCount(count + 1)}, 2000);
     };
 
     const dec = () => {
