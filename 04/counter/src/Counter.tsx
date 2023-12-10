@@ -7,8 +7,16 @@ export const Counter:React.FC = () => {
         setTimeout(() => {setCount(count + 1)}, 2000);
     };
 
-    const dec = () => {
-        setCount(count - 1);
+    const dec = (count: number) => {
+        const tmpCount = count - 1;
+
+        if (tmpCount < 0) {
+            // 最小値は0としたい
+            // マイナスは表示させたくない
+            setCount(0);
+        } else {
+            setCount(tmpCount);
+        }
     };
 
     const reset = () => {
@@ -20,7 +28,7 @@ export const Counter:React.FC = () => {
             <div>
                 <span>{count}</span>
                 <button onClick={inc}>+</button>
-                <button onClick={dec}>-</button>
+                <button onClick={() => dec(count)}>-</button>
                 <button onClick={reset}>reset</button>
             </div>
         </>
