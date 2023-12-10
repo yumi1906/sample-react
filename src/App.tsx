@@ -1,7 +1,14 @@
 import React from "react";
+import {TodoItem} from "./TodoItem";
 import "./styles.css";
 
-const todoList = [
+export type TodoItemType = {
+    id: number,
+    task: string,
+    completed:boolean,
+};
+
+const todoList: TodoItemType[] = [
     {id: 1, task: "Learning Browser", completed: true},
     {id: 2, task: "Learning JavaScript/TypeScript", completed: true},
     {id: 3, task: "Learning React", completed: false},
@@ -10,15 +17,6 @@ const todoList = [
 
 export default function App() {
   return (
-      <>
-          {todoList.map((i) =>{
-              return (
-                  <div key={i.id}>
-                      <input type="checkbox" />
-                      <label>{i.task}</label>
-                  </div>
-              );
-          })}
-      </>
+      <TodoItem todoList={todoList}/>
   );
 }
