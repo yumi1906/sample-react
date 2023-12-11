@@ -1,5 +1,6 @@
 import React from "react";
 import {TodoItem} from "./TodoItem";
+import {Text} from "./Text";
 import "./styles.css";
 
 export type TodoItemType = {
@@ -16,7 +17,10 @@ const todoList: TodoItemType[] = [
 ];
 
 export default function App() {
-  return (
-      <TodoItem todoList={todoList}/>
+    return (
+      <>
+          <TodoItem todoList={todoList}/>
+          <Text></Text>
+      </>
   );
 }
