@@ -1,6 +1,6 @@
 import React from "react";
-import {TodoItem} from "./TodoItem";
-import {Text} from "./Text";
+import {TodoItem} from "./components/TodoItem";
+import {Text} from "./components/Text";
 import "./styles.css";
 
 export type TodoItemType = {
