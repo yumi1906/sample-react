@@ -1,9 +1,15 @@
 import React ,{useState} from "react";
+import {TodoItemType} from "../App";
 
-type Props = {};
+type Props = {
+    todoList: TodoItemType[];
+};
 
-export const Text:React.FC<Props> = () => {
+export const Text:React.FC<Props> = (props) => {
+    const {todoList} = props;
     const [text, setText] = useState("");
+    const [addTask, setAddTask] = useState("");
+
     const handleChangeText:React.ChangeEventHandler<HTMLInputElement> =
         (event) => setText(event.currentTarget.value);
 

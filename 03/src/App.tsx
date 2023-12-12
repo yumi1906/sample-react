@@ -20,7 +20,7 @@ export default function App() {
     return (
       <>
           <TodoItem todoList={todoList}/>
-          <Text></Text>
+          {/*<Text todoList={todoList}></Text>*/}
       </>
   );
 }
